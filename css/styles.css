@@ -56,7 +56,7 @@ body {
   .container {
     display: flex;
     width: 95rem;
-    padding-top: 15rem;
+    padding-top: 20rem;
   }
   .container div:first-of-type {
     border-radius: 0.8rem 0 0 0.8rem;
