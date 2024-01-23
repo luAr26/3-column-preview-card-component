@@ -14,6 +14,7 @@ body {
   font-family: "Lexend Deca", sans-serif;
   font-size: 1.5rem;
   height: 100vh;
+  background-color: #f2f2f2;
 }
 
 .sr-only {
