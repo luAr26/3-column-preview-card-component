@@ -1,0 +1,148 @@
+$heading-color: #f2f2f2;
+$text-color: #fff;
+$primary-color: #e28625;
+$secondary-color: #006971;
+$tertiary-color: #004140;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1.5rem;
+  height: 100vh;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  position: absolute;
+  top: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.container {
+  width: 35.7rem;
+  margin: 0 auto;
+  padding: 6.1rem 1.5rem 3.05rem;
+
+  div:first-of-type {
+    border-radius: 0.8rem 0.8rem 0 0;
+  }
+
+  div:last-of-type {
+    border-radius: 0 0 0.8rem 0.8rem;
+  }
+
+  @media only screen and (min-width: 950px) {
+    & {
+      display: flex;
+      width: 95rem;
+    }
+
+    div:first-of-type {
+      border-radius: 0.8rem 0 0 0.8rem;
+    }
+
+    div:last-of-type {
+      border-radius: 0 0.8rem 0.8rem 0;
+    }
+  }
+}
+
+.card {
+  &.card--primary {
+    background-color: $primary-color;
+  }
+  &.card--secondary {
+    background-color: $secondary-color;
+  }
+  &.card--tertiary {
+    background-color: $tertiary-color;
+  }
+
+  padding: 4.8rem;
+
+  img {
+    width: 6.4rem;
+    margin-bottom: 3.2rem;
+  }
+  h2 {
+    font-family: "Big Shoulders Display", sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 4rem;
+    margin-bottom: 2.5rem;
+    color: $heading-color;
+  }
+
+  p {
+    font-weight: 400;
+    color: $text-color;
+    opacity: 0.8;
+    margin-bottom: 2.5rem;
+    line-height: 1.66;
+
+    @media only screen and (min-width: 950px) {
+      & {
+        margin-bottom: 8.2rem;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 950px) {
+    & {
+      flex: 1 1 33.3333%;
+    }
+  }
+}
+
+.btn {
+  border: none;
+  padding: 1.7rem 3.8rem 1.6rem 3.3rem;
+  font-size: inherit;
+  background-color: $heading-color;
+  border-radius: 2.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out,
+    color 0.3s ease-in-out;
+
+  &:hover,
+  &:active {
+    background-color: transparent;
+    box-shadow: inset 0 0 0 2px $text-color;
+  }
+
+  &.btn--primary {
+    color: $primary-color;
+  }
+
+  &.btn--secondary {
+    color: $secondary-color;
+  }
+
+  &.btn--tertiary {
+    color: $tertiary-color;
+  }
+  &.btn--primary,
+  &.btn--secondary,
+  &.btn--tertiary {
+    &:hover,
+    &:active {
+      color: $text-color;
+    }
+  }
+}
